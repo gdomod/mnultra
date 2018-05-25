@@ -22,5 +22,5 @@ masternode=1\n\
 masternodeaddr=$IP:$PORT" >> /root/config.conf
 fi
 
-/usr/local/bin/bitcoind -conf=/root/config.conf -masternodeprivkey=$1
+/usr/local/bin/ultranatumd -conf=/root/config.conf -masternodeprivkey=$1
 
