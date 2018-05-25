@@ -8,7 +8,7 @@ WORKDIR /tmp/
 #RUN git clone https://github.com/ultranatum/ultranatum /root/wallet
 #RUN chmod -R 755 /root/wallet && cd /root/wallet && ./autogen.sh && ./configure --disable-tests --disable-bench --with-gui=no --disable-silent-rules --with-incompatible-bdb --with-unsupported-ssl  && make && make install
 #RUN rm -r /root/*
-
+RUN apt-get update && apt-get install curl -y
 ADD https://github.com/ultranatum/ultranatum/releases/download/1.0.0.1/ultranatumcore-1.0.0.1-linux64.tar.gz .
 RUN tar -xvf ultranatumcore-1.0.0.1-linux64.tar.gz ultranatumcore-1.0.0.1 --one-top-level=/usr/local --strip 1
 
