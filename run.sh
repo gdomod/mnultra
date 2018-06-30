@@ -20,6 +20,7 @@ maxconnections=256\n\
 logtimestamps=1\n\
 masternode=1\n\
 externalip=$IP:$PORT" >> /root/config.conf
+
 fi
 
 /usr/local/bin/ultranatumd -conf=/root/config.conf -masternodeprivkey=$1
